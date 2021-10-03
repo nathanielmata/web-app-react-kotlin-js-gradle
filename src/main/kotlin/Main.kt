@@ -1,5 +1,8 @@
+import react.dom.*
 import kotlinx.browser.document
 
 fun main() {
-    document.bgColor = "blue"
+    render(document.getElementById("root")) {
+        child(App::class) {}
+    }
 }
