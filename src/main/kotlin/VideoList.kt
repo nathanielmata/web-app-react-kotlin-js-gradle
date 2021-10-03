@@ -16,3 +16,9 @@ class VideoList: RComponent<VideoListProps, RState>() {
         }
     }
 }
+
+fun RBuilder.videoList(handler: VideoListProps.() -> Unit): ReactElement {
+    return child(VideoList::class) {
+        this.attrs(handler)
+    }
+}
